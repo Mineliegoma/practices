@@ -22,11 +22,20 @@ class Header extends React.Component {
  instructors = () => {
   return this.props.instructors.map(function (instructor_name) { return <Bline name={instructor_name} /> })
  }
+ clickHandler = () => {
+  //console.log("before cliked", this.state.color)
+  this.setState({ color: "Blue" }) // it create a new object and calling n the render method again
+
+  //console.log("after state change cliked", this.state.color)
+
+
+ }
  render() {
   console.log("console log in render method:", this.state)
   return (
+   // event always take a callback function
    <div>
-    <h1 style={{ "border-style": "dashed", "border-color": `${this.state.color}` }}> Welcome to our app</h1>
+    <h1 onClick={this.clickHandler} style={{ "border-style": "dashed", "border-color": `${this.state.color}` }}> Welcome to our app</h1>
     {this.instructors()}
 
    </div>
