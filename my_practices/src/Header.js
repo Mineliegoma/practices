@@ -18,15 +18,18 @@ class Header extends React.Component {
 
  // }
  //another way to do this is to create, this is ex6 
- state = { color: "red" }
+ state = { color: "black" }
  instructors = () => {
   return this.props.instructors.map(function (instructor_name) { return <Bline name={instructor_name} /> })
  }
  clickHandler = () => {
-  //console.log("before cliked", this.state.color)
-  this.setState({ color: "Blue" }) // it create a new object and calling n the render method again
+  if (this.state.color == "black") {
+   this.setState({ color: "blue" })
+  } else {
+   this.setState({ color: "black" })
 
-  //console.log("after state change cliked", this.state.color)
+  }
+
 
 
  }
