@@ -29,6 +29,10 @@ class Header extends React.Component {
    this.setState({ color: "black" })
 
   }
+  // what we taled about so far:
+  // we talked about two data flow
+  // parent to child using => props
+  //internal component using => state
 
 
 
