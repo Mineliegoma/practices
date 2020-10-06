@@ -5,7 +5,10 @@ import Instructor from '../components/Instructor'
 
 
 function InstructorContainer(props) {
- let instructors = props.instructors.map(instructorObject => <Instructor instructor={instructorObject} />)
+
+ const instructors_names = [{ id: 1, name: "Tashawn" }, { id: 2, name: "greg" }, { id: 3, name: "Steven" }, { id: 4, name: "Ian" }]
+
+ let instructors = instructors_names.map(instructorObject => <Instructor key={instructorObject.id} instructor={instructorObject} appClickHandler={props.appClickHandler} />)
  //this instructor singular should match the instructor component see line 3 instructor.js 
  return (
   <>

@@ -66,3 +66,10 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `yarn build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+-Child to parent
+ -state, event listeners, callback functions , props
+### deliverable
+
+-when i click on an instructor that instructor should update
+  -check awwapp
+

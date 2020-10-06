@@ -3,17 +3,25 @@ import logo from './logo.svg';
 import './App.css';
 import Header from './components/Header'
 import InstructorContainer from './Containers/InstructorContainer'
+import AnimeContainer from './Containers/AnimeContainer';
 
-function App() {
-  const instructors_names = [{ id: 1, name: "Tashawn" }, { id: 2, name: "greg" }, { id: 3, name: "Steven" }, { id: 4, name: "Ian" }]
-  return (
-    <>
-      <Header />
-      <InstructorContainer instructors={instructors_names} />
-      {/* this instructors variable should match the one on map iterattion should match the  */}
-    </>
+class App extends React.Component {
+  state = { instructor: {} }
+  appClickHandler = (instructor_obj) => {
+    console.log("%c in App!", "color: red", instructor_obj)
+    this.setState({ instructor: instructor_obj })
+  }
+  render() {
+    return (
+      <>
+        <Header />
+        <InstructorContainer appClickHandler={this.appClickHandler} />
+        <AnimeContainer instructor={this.state.instructor} />
+        {/* this instructors variable should match the one on map iterattion should match the  */}
+      </>
 
-  )
+    );
+  }
 }
 
 export default App;
