@@ -7,7 +7,7 @@ import Form from '../components/Form'
 
 class InstructorContainer extends React.Component {
  state = {
-  instructors: [{ id: 1, name: "Tashawn" }, { id: 2, name: "greg" }, { id: 3, name: "Steven" }, { id: 4, name: "Ian" }]
+  instructors: [{ id: 1, name: "Tashawn", mod: 4 }, { id: 2, name: "greg", mod: 2 }, { id: 3, name: "Steven", mod: 3 }, { id: 4, name: "Ian", mod: 1 }]
  }
 
 
