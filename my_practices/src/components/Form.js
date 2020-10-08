@@ -8,11 +8,15 @@ class Form extends React.Component {
  }
  changeHandler = (e) => {
   console.log('events:', e.target.value)
-  if (e.target.name == "name") {
-   this.setState({ name: e.target.value })
-  } else {
-   this.setState({ mod: e.target.value })
-  }
+  this.setState({ [e.target.name]: e.target.value })
+
+
+
+  // if (e.target.name == "name") {
+  //  this.setState({ name: e.target.value })
+  // } else {
+  //  this.setState({ mod: e.target.value })
+  // }
  }
 
 
